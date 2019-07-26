@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Main.css"
 
-class String extends React.Component {
+class Array extends React.Component {
   constructor(props){
     super(props)
   }
@@ -12,13 +12,13 @@ class String extends React.Component {
 
   componentDidMount = () => {
     fetch(
-      "https://raw.githubusercontent.com/akslucky619/js-methods/master/js.json"
+      "https://raw.githubusercontent.com/akslucky619/js-methods/master/arr.json"
     )
       .then(function(response) {
         return response.json();
       })
       .then(myJson => {
-        // console.log(myJson);
+        console.log(myJson);
         this.setState({ methods: myJson });
       });
   };
@@ -26,7 +26,7 @@ class String extends React.Component {
   render() {
     //   console.log(this.state.methods)
     const methods = this.state.methods;
-    console.log(methods, "in str render");
+    console.log(methods, "in render");
     return (
       <div className="timeline">
         {methods
@@ -54,4 +54,4 @@ class String extends React.Component {
   }
 }
 
-export default String;
+export default Array;

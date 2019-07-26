@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Main.css"
+import "./Main.css";
 
 export default function Home() {
   return (
@@ -8,14 +8,15 @@ export default function Home() {
       <div className="container left">
         <div className="content">
           <h2>
-            <Link to="/string">String Methods</Link>
+            <Link to="/array">Array Methods</Link>
           </h2>
         </div>
       </div>
       <div className="container right">
         <div className="content">
-          <h2>2016</h2>
-          <p>Lorem ipsum..</p>
+          <h2>
+            <Link to="/string">String Methods</Link>
+          </h2>
         </div>
       </div>
       <div className="container left">
