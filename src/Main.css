@@ -134,12 +134,12 @@
     }
   
   /* Make sure all circles are at the same spot */
-    .container:nth-child(odd)::after, .container:nth-child(even)::after {
+    .left::after, .right::after {
       left: 15px;
     }
   
   /* Make all right containers behave like the left ones */
-  .container:nth-child(even){
-    left: 50%;
-  }
+    .right {
+      left: 0%;
+    }
   }
