@@ -29,7 +29,7 @@ class String extends React.Component {
         {methods
           ? methods.map((method, i) => {
               return (
-                <div className="container left">
+                <div className="container">
                   <div className="content">
                     <h2>
                       <Link to="/string">{method.method}</Link>
