@@ -25,11 +25,11 @@ class String extends React.Component {
     const methods = this.state.methods;
     console.log(methods, "in render");
     return (
-      <div>
+      <div className="timeline">
         {methods
           ? methods.map((method, i) => {
               return (
-                <div className="container left">
+                <div className="container">
                   <div className="content">
                     <h2>
                       <Link to="/string">{method.method}</Link>
