@@ -1,40 +1,40 @@
-import React from 'react';
-import Header from './Header'
+import React from "react";
+import Header from "./Header";
 import "./Method.css";
 
-class Method extends React.Component{
-    constructor(props){
-        super(props)
-    }
+class Method extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-    render(){
-        return(
-            <>
-            <Header/>
-            <div className="wrapper">
-            <h1>Array.prototype.filter()</h1>
-  <h4>Syntax:</h4>
-  <code>
-    var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction',
-    'present'];
-    <br />
-    const result = words.filter(word =&gt; word.length &gt; 6);
-    <br />
-    console.log(result);
-    <br />
-    // expected output: Array ["exuberant", "destruction", "present"]
-  </code>
-  <h4>Parameter:</h4>
-  <p>1. Callback(element, index, array), thisArg</p>
-  <h4>Return:</h4>
-  <p>
-    A new Array with filtered elements.If no elements pass the test, an empty
-    array will be returned.
-  </p>
-  </div>
-  </>
-        )
-    }
+  render() {
+    const method = this.props.location.state.method;
+    console.log(method)
+    return (
+      <>
+        <Header />
+        <div className="wrapper">
+          <h1>{method.method}</h1>
+          <h4>Syntax:</h4>
+          <code>
+            {method.syntax}
+            <br />
+            {method.syntax1}
+            <br />
+            {method.syntax2}
+          </code>
+          <h4>Parameter:</h4>
+          <p>{method.parameter}</p>
+          <h4>Return:</h4>
+          <p>
+            {method.return}
+          </p>
+          <h4>Summary</h4>
+          <p>{method.summary}</p>
+        </div>
+      </>
+    );
+  }
 }
 
-export default Method
+export default Method;
