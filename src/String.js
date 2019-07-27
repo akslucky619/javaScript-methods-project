@@ -29,8 +29,8 @@ class String extends React.Component {
     const methods = this.state.methods;
     console.log(methods, "in str render");
     return (
-      <>
-      <Header/>
+        <>
+        <Header/>
       <div className="timeline">
         {methods
           ? methods.map((method, i) => {
