@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from './Header';
 import "./Main.css";
 
 let Home = () => {
   return (
+    <>
+    <Header/>
     <div className="timeline">
       <div className="container left">
         <div className="content">
@@ -32,6 +35,7 @@ let Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

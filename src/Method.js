@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header'
 import "./Method.css";
 
 class Method extends React.Component{
@@ -8,7 +9,9 @@ class Method extends React.Component{
 
     render(){
         return(
-            <div>
+            <>
+            <Header/>
+            <div className="wrapper">
             <h1>Array.prototype.filter()</h1>
   <h4>Syntax:</h4>
   <code>
@@ -29,6 +32,7 @@ class Method extends React.Component{
     array will be returned.
   </p>
   </div>
+  </>
         )
     }
 }

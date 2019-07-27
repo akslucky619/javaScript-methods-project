@@ -2,6 +2,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
   /* Set a background color */
@@ -143,8 +145,4 @@
     .right {
       left: 0%;
     }
-  }
-
-  .link{
-    color: blue;
   }

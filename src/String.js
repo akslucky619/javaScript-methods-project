@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from './Header'
 import "./Main.css"
 
 class String extends React.Component {
@@ -28,6 +29,8 @@ class String extends React.Component {
     const methods = this.state.methods;
     console.log(methods, "in str render");
     return (
+      <>
+      <Header/>
       <div className="timeline">
         {methods
           ? methods.map((method, i) => {
@@ -50,6 +53,7 @@ class String extends React.Component {
             <h1>Loading...</h1>
           )}
       </div>
+      </>
     );
   }
 }
