@@ -15,23 +15,23 @@ class Method extends React.Component {
       <>
         <Header />
         <div className="wrapper">
-          <h1>{method.method}</h1>
-          <h4>Syntax:</h4>
-          <code>
-            {method.syntax}
-            <br />
-            {method.syntax1}
-            <br />
-            {method.syntax2}
-          </code>
-          <h4>Parameter:</h4>
-          <p>{method.parameter}</p>
-          <h4>Return:</h4>
-          <p>
-            {method.return}
-          </p>
-          <h4>Summary</h4>
-          <p>{method.summary}</p>
+          <h1 className="method-title">{method.method}</h1>
+          <h4 className="method-heading">Syntax:</h4>
+            <code>
+              <p className="syntax">{method.syntax}</p>
+              <br />
+              <p className="syntax">{method.syntax1}</p>
+              <br />
+              <p className="syntax">{method.syntax2}</p>
+            </code>
+          <h4 className="method-heading">Parameter:</h4>
+            <p className="method-para">{method.parameter}</p>
+          <h4 className="method-heading">Return:</h4>
+            <p className="method-para">
+              {method.return}
+            </p>
+          <h4 className="method-heading">Summary</h4>
+            <p className="method-para">{method.summary}</p>
         </div>
         <Editor />
       </>
