@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Header from './Header'
-import "./Main.css"
+import Header from "./Header";
+import "./Main.css";
 
 class String extends React.Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
   }
   state = {
     methods: []
@@ -29,30 +29,42 @@ class String extends React.Component {
     const methods = this.state.methods;
     console.log(methods, "in str render");
     return (
-        <>
-        <Header/>
-      <div className="timeline">
-        {methods
-          ? methods.map((method, i) => {
+      <>
+        <Header />
+        <div className="timeline">
+          {methods.length == 0 ? (
+            <div className="container left">
+            <div className="content">
+              <h2>Loading...</h2>
+              <p>Please wait for a while...</p>
+            </div>
+          </div>
+          
+          ) : (
+            methods.map((method, i) => {
               return (
-                <div className={i%2 == 0? "container left":"container right"}>
+                <div
+                  className={i % 2 == 0 ? "container left" : "container right"}
+                >
                   <div className="content">
                     <h2>
-                      <Link to={{
-                        pathname:"/methods",
-                          state:{
-                            method:method
+                      <Link
+                        to={{
+                          pathname: "/methods",
+                          state: {
+                            method: method
                           }
-                        }} >{method.method}</Link>
+                        }}
+                      >
+                        {method.method}
+                      </Link>
                     </h2>
                   </div>
                 </div>
               );
             })
-          : (
-            <h1>Loading...</h1>
           )}
-      </div>
+        </div>
       </>
     );
   }
