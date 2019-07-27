@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
 import "./Main.css";
+import { bounceInLeft } from "animate.css";
 
 class Array extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class Array extends React.Component {
     return (
       <>
         <Header />
-          <div className="timeline">
+          <div className="timeline animated bounceInLeft fast">
             {methods.length == 0 ? (
                 <div className="container left">
                 <div className="content">

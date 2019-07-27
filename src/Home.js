@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from './Header';
+import { slideInUp } from "animate.css";
 import "./Main.css";
 
 let Home = () => {
   return (
     <>
     <Header/>
-    <div className="timeline">
+    <div className="timeline animated slideInUp fast">
       <div className="container left">
         <div className="content">
           <h2>
