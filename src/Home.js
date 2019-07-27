@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Main.css";
 
-export default function Home() {
+let Home = () => {
   return (
     <div className="timeline">
       <div className="container left">
@@ -34,3 +34,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
