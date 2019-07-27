@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import "./Method.css";
+import Editor from "./Editor";
 
 class Method extends React.Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class Method extends React.Component {
           <h4>Summary</h4>
           <p>{method.summary}</p>
         </div>
+        <Editor />
       </>
     );
   }
