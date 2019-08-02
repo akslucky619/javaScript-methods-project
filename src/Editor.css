@@ -23,3 +23,10 @@
                 color: #fff;
                 font-size: 15px;
             }
+
+            /* Media Queries */
+            @media all and (max-width: 600px) {
+                .abcd {
+                    display: none;
+                }
+            }
