@@ -14,7 +14,7 @@ class Array extends React.Component {
 
   componentDidMount = () => {
     fetch(
-      "https://raw.githubusercontent.com/akslucky619/js-methods/master/arr.json"
+      "https://raw.githubusercontent.com/Swastikyadav/array-methods-api/master/array-method.js"
     )
       .then(function(response) {
         return response.json();

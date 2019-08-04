@@ -15,6 +15,7 @@ class String extends React.Component {
   componentDidMount = () => {
     fetch(
       "https://raw.githubusercontent.com/akslucky619/js-methods/master/js.json"
+      // updated api
     )
       .then(function(response) {
         return response.json();
