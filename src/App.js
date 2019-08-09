@@ -1,9 +1,9 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./Home";
 import Array from "./Array";
 import Method from "./Method";
-import String from  "./String";
+import String from "./String";
 
 function App() {
   return (

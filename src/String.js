@@ -1,13 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import { bounceInRight } from "animate.css";
 import "./Main.css";
 
 class String extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   state = {
     methods: []
   };
@@ -34,19 +30,18 @@ class String extends React.Component {
       <>
         <Header />
         <div className="timeline animated bounceInRight fast">
-          {methods.length == 0 ? (
+          {methods.length === 0 ? (
             <div className="container left">
-            <div className="content">
-              <h2>Loading...</h2>
-              <p>Please wait for a while...</p>
+              <div className="content">
+                <h2>Loading...</h2>
+                <p>Please wait for a while...</p>
+              </div>
             </div>
-          </div>
-          
           ) : (
             methods.map((method, i) => {
               return (
                 <div
-                  className={i % 2 == 0 ? "container left" : "container right"}
+                  className={i % 2 === 0 ? "container left" : "container right"}
                 >
                   <div className="content">
                     <h2>
